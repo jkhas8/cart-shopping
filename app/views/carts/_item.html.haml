@@ -1,4 +1,16 @@
-.fields
-  .item
-    = f.number_field :quantity, class: "form-control"
-    = link_to_remove_fields "remove", f
+.col-md-3
+  .box
+    .box-header
+      = f.object.product.name
+    .box-body
+      %p= f.object.product.description
+      .price
+        %p
+          %b Price:
+          $#{f.object.product.cost}
+    .box-footter
+      .row
+        .col-xs-6
+          = f.number_field :quantity, class: "form-control"
+        .col-xs-6
+          = link_to_remove_fields "Remove", f

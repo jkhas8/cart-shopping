@@ -1,10 +1,9 @@
-.row
-  .col-md-6.col-md-offset-3
-    = @cart.id
-    = @cart.status
-    = form_for @cart do |f|
-      = f.fields_for :items do |builder|
-        = render "item", f: builder
-      = f.submit "Save changes", class: "btn btn-primary"
+%h1 Cart ##{@cart.id}
+= form_for @cart do |f|
+  .row
+    = f.fields_for :items do |builder|
+      = render "item", f: builder
+  .footer
     = link_to "Delete", cart_path(@cart), method: "delete",
-      data: { confirm: "You sure?" }, class: "btn btn-danger btn-xs"
+      data: { confirm: "You sure?" }, class: "btn btn-warning"
+    = f.submit "Save changes", class: "btn btn-primary"

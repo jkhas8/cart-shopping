@@ -1,5 +1,18 @@
-= product.name
-= form_for item, remote: true do |f|
-  = f.number_field :quantity, value: 1, min: 1
-  = f.hidden_field :product_id, value: product.id
-  = f.submit "Add to Cart"
+.col-md-3
+  .box
+    .box-header
+      = product.name
+    .box-body
+      %p= product.description
+      .price
+        %p
+          %b Price:
+          $#{product.cost}
+    .box-footter
+      = form_for item, remote: true, class: "form-inline" do |f|
+        .row
+          .col-xs-6
+            = f.number_field :quantity, value: 1, min: 1, class: "form-control"
+          .col-xs-6
+            = f.hidden_field :product_id, value: product.id
+            = f.submit "Add to Cart", class: "btn btn-success"
