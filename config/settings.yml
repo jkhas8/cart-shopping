@@ -1,0 +1,7 @@
+model:
+  cart:
+    status: ["open", "done", "cancel"]
+  product:
+    status: ["active", "deleted"]
+constant:
+  per_page: 10
