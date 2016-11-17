@@ -1,0 +1,19 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{ "aria-expanded": "false", "data-target": "#cart_shopping_collapse", "data-toggle": "collapse", type: "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand
+        Cart shopping
+    #cart_shopping_collapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          = link_to "Home", root_path
+        %li
+          = link_to "Product", products_path
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          = link_to "Cart", cart_path(@cart.present? ? @cart : "1")

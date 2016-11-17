@@ -33,6 +33,8 @@ gem "jbuilder", "~> 2.5"
 gem "config"
 gem "kaminari"
 gem "haml-rails"
+gem "bootstrap-sass"
+gem "autoprefixer-rails"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
@@ -41,6 +43,11 @@ group :development, :test do
   gem "rspec-rails", "~> 3.5"
   gem "factory_girl_rails"
   gem "rails-controller-testing"
+
+  gem "capistrano", "~> 3.1.0"
+  gem "capistrano-bundler", "~> 1.1.2"
+  gem "capistrano-rails", "~> 1.1.1"
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
 
 group :development do
