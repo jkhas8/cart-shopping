@@ -1,0 +1,5 @@
+model:
+  cart:
+    status: ["open", "done", "cancel"]
+  product:
+    status: ["active", "deleted"]
