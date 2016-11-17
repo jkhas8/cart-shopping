@@ -1,0 +1,5 @@
+<% if @cart.errors.any? || @item.errors.any? %>
+  alert("The information is not valid")
+<% else %>
+  alert("Cart was updated.")
+<% end %>
