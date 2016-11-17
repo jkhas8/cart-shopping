@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.0.0", '>= 5.0.0.1'
+gem "rails", "~> 5.0.0", ">= 5.0.0.1"
 # Use sqlite3 as the database for Active Record
 gem "sqlite3"
 # Use Puma as the app server
@@ -31,6 +31,8 @@ gem "jbuilder", "~> 2.5"
 # gem "capistrano-rails", group: :development
 
 gem "config"
+gem "kaminari"
+gem "haml-rails"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
@@ -38,6 +40,7 @@ group :development, :test do
 
   gem "rspec-rails", "~> 3.5"
   gem "factory_girl_rails"
+  gem "rails-controller-testing"
 end
 
 group :development do
